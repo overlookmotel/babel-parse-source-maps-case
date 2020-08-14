@@ -37,8 +37,8 @@ const {code: codeB, map: mapB} = generate(
 );
 
 // Parse intermediates
-const ast2A = parse(codeA, {sourceFilename: 'a.transpiled.js', inputSourceMap: mapA});
-const ast2B = parse(codeB, {sourceFilename: 'b.transpiled.js', inputSourceMap: mapB});
+const ast2A = parse(codeA, {sourceFilename: 'a.intermediate.js', inputSourceMap: mapA});
+const ast2B = parse(codeB, {sourceFilename: 'b.intermediate.js', inputSourceMap: mapB});
 
 // Combine the two
 const astCombined = t.program(
@@ -49,8 +49,8 @@ const {code: codeCombined, map: mapCombined} = generate(
   astCombined,
   {sourceMaps: true},
   {
-    'a.transpiled.js': codeA,
-    'b.transpiled.js': codeB,
+    'a.intermediate.js': codeA,
+    'b.intermediate.js': codeB,
     'a.js': inputA,
     'b.js': inputB
   }

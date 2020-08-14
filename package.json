@@ -1,0 +1,14 @@
+{
+  "name": "babel-parse-source-maps-case",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/generator": "^7.11.0",
+    "@babel/parser": "^7.11.3",
+    "@babel/types": "^7.11.0",
+    "source-map": "^0.5.7"
+  }
+}

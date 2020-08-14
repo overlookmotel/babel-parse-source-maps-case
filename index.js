@@ -56,7 +56,7 @@ const {code: codeCombined, map: mapCombined} = generate(
   }
 );
 
-console.log('codeCombined:', codeCombined);
+console.log('codeCombined:', JSON.stringify(codeCombined));
 console.log('mapCombined:', mapCombined);
 
 const consumer = new SourceMapConsumer(mapCombined);
